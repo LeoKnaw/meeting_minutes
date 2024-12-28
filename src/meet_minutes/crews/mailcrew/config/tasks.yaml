@@ -1,0 +1,9 @@
+mail_draft_task:
+  description: >
+    You are to send an email to the client with this body: 
+    {body}
+
+  expected_output: >
+    Return whether the email was sent successfully or not
+  agent: mail_draft_agent
+
