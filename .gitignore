@@ -2,4 +2,6 @@
 __pycache__/
 lib/
 pyproject.toml
-C:\Users\edafe\PycharmProjects\tyler\meet_minutes\src\meet_minutes\crews\mailcrew\tools\credentials.json
+src\meet_minutes\crews\mailcrew\tools\credentials.json
+src\meet_minutes\crews\mailcrew\tools\token.json
+src/meet_minutes/agentops.log

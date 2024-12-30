@@ -10,6 +10,8 @@ from dotenv import load_dotenv
 from openai import OpenAI
 from pydub import AudioSegment
 from pydub.utils import make_chunks
+import agentops
+import os
 
 load_dotenv()
 client = OpenAI()
@@ -68,12 +70,17 @@ class MeetMinutesFlow(Flow[MeetMinutesState]):
 
 
 def kickoff():
+    session = agentops.init(api_key=os.getenv("AGENTOPS_API_KEY"))
+
     meet_minutes_flow = MeetMinutesFlow()
     meet_minutes_flow.plot()
     meet_minutes_flow.kickoff()
 
+    session.end_session()
+
 
 def plot():
+
     meet_miuntes_flow = MeetMinutesFlow()
     meet_miuntes_flow.plot()
 
